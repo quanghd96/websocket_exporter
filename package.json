@@ -1,0 +1,20 @@
+{
+  "name": "websocket_exporter",
+  "version": "1.0.0",
+  "description": "Report the online / offline status of websocket to prometheus",
+  "main": "index.js",
+  "author": "Quang Dang",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "serve": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "prom-client": "^11.5.3",
+    "ws": "^7.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
