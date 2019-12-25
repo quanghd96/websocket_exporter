@@ -3,8 +3,8 @@ const client = require('prom-client');
 const { WebSocketClient } = require('./websocket');
 
 const gauge = new client.Gauge({
-  name: 'metric_name',
-  help: 'metric_help',
+  name: 'websocket',
+  help: 'websocket_help',
   labelNames: ['status']
 });
 
