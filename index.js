@@ -1,6 +1,7 @@
 const server = require('express')();
 const client = require('prom-client');
 const { WebSocketClient } = require('./websocket');
+const ENDPOINT = process.env.ENDPOINT
 
 const gauge = new client.Gauge({
   name: 'websocket',
@@ -9,7 +10,7 @@ const gauge = new client.Gauge({
 });
 
 const ws = new WebSocketClient();
-ws.open('ws://ws.javisco.com:8105');
+ws.open(ENDPOINT);
 ws.onopen = function (e) {
   gauge.labels('status').set(1);
 }
