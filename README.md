@@ -8,4 +8,4 @@ docker run -d -p 9189:9189 -e ENDPOINT='websocket-server:8105' --name websocket_
 
 That's it! Server is now listening on port 9189.
 
-Environment variable ENDPOIINT must be passed to the container.
+Environment variable ENDPOINT must be passed to the container.
