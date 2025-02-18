@@ -19,6 +19,7 @@ ws.onerror = function (e) {
 }
 
 server.get('/metrics', (req, res) => {
+  res.set('Content-Type', 'text/plain; version=0.0.4');
   res.end(client.register.metrics());
 });
 
